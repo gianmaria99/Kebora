@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="views/figures/icon.png">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Authentication Form VIV GROUP</title>
+
+    <script type="text/javascript">
+        function disableBack() { window.history.forward(); }
+        setTimeout("disableBack()", 0);
+        window.onunload = function () { null };
+    </script>
+
+</head>
+<body>
+</body>
+<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">VIV GROUP CHEBORA</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="https://vivgroupsrl.it/">OFFICIAL SITE VIVGROUP</a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="">Registration</a></li>
+      </ul>
+    </div>
+  </nav>
+   
+    <div class="container">
+        <div class="row center">
+            <h1>Authentication</h1>
+        </div>
+        
+        <div class="row">
+            <form action="auth" method="POST" class="col s12">           
+                <div class="row">    
+                    <div class="input-field col s4 offset-s4">
+                        <input placeholder="" name="name" type="text">
+                        <label for="name">Username:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4 offset-s4">
+                        <input placeholder="" name="password" type="password">
+                        <label for="password">Password:</label>
+                    </div>
+                </div>
+                <div class="row center">
+                    <button class="btn waves-light" type="submit">LOGIN</button>
+                </div>
+                 
+            </form>
+        </div>      
+    </div>
+    
+    <div class="row center">
+        <h1><font color="red"><%- message %></font></h1> 
+    </div>
+    
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Info</h5>
+              <h6>Developed and Designed by Simone Longato</h6>
+              <p class="grey-text text-lighten-4">This is an external page to handle and help the production process for VivGroup
+                  and has no commercial purposes. <br>
+                  The whole application has been developed in NodeJS and makes use of a local 
+                  server. <br>
+                  The authentication process follows the Jwt standard and tokens 
+                  have 1 hour expiration time<br>
+              </p>
+            </div>
+            <div class="col l4 offset-l1 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a href="https://vivgroupsrl.it/">Commercial Site</a></li>
+              </ul>
+            </div>
+            <div class="col l4 offset-l1 s12">
+                <h5 class="white-text">Emails & Contacts</h5>
+                <ul>
+                  <li><p>Dev: iotvivgroup@gmail.com || longato729@gmail.com</p></li>
+                  <li><p>VivGroup: info@vivgroupsrl.com</p></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 Copyright Text
+          <a class="grey-text text-lighten-4 right">Simone Leonardo Longato - Servizi Ingegneristici - longato729@gmail.com</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

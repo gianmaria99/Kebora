@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="views/figures/icon.png">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <link href="style/stylesheet.css" rel="stylesheet"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Tabella Polvere</title>
+    
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/menu" class="brand-logo center">Tabella Polvere</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="/ordiniTab">MAGAZZINO</a></li>
+          <li><a href="/polvereTab">POLVERE</a></li>
+          <li><a href="">CLIENTI</a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/exit">Exit</a></li>
+        </ul>
+      </div>
+    </nav>
+
+  <div class="container">
+    
+    <div id="serch-section">
+      <div class="row">
+        <div class="input-field col s4 offset-l4 autocomplete">
+          <label for="serch"><font color="red" size="+2"><b>Search Item:</b></font></label>    
+          <input placeholder="" id="serch" class="validate" type="text" oninput="serch()">
+        </div>
+        <button onclick="delSerch()" style="margin-top: 20px;" id="del-serch" class="btn">DEL</button>
+      </div>
+    </div>
+
+    <div id="add_btn">
+      <div class="row center">
+        <button onclick="add()" class="btn">ADD NEW POWDER</button>
+      </div>
+    </div>
+
+    
+
+    <div hidden id="edit">
+      <div class="row">
+        <div class="input-field col s4 offset-l2">       
+          <label for="ID_polvere"><font color="red"><b>ID_polvere:</b></font></label>
+          <input placeholder="" id="ID_polvere" name="ID_polvere" disabled type="text">
+        </div>
+        <div class="input-field col s4">
+          <label for="ID_interno_polvere"><font color="red"><b>ID_interno_polvere:</b></font></label>      
+          <input placeholder="" id="ID_interno_polvere" name="ID_interno_polvere" disabled  type="text">
+        </div>   
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <label for="Descrizione"><font color="red"><b>Descrizione:</b></font></label>       
+          <input placeholder="" id="Descrizione" name="Descrizione" type="text">
+        </div>
+        <div class="input-field col s4">
+          <label for="Codice_fornitore"><font color="red"><b>Codice_fornitore:</b></font></label>       
+          <input placeholder="" id="Codice_fornitore" name="Codice_fornitore" type="text">
+        </div>
+        <div class="input-field col s4">
+          <label for="Giacenza"><font color="red"><b>Giacenza:</b></font></label>       
+          <input placeholder="" id="Giacenza" name="Giacenza" type="number"><br>
+        </div>        
+      </div>
+    
+      <div id="edit_btn" class="row center">
+        <button  class="btn" onclick="closeEdit()">EDIT</button>
+      </div>
+      <div class="row center">
+        <button class="btn" onclick="decline()">DECLINE</button> 
+      </div>  
+              
+    </div>
+
+    <div hidden id="confirm_add_btn">
+      <div class="row center">
+        <button onclick="confirmAdd()" class="btn">CONFIRM TO ADD</button>
+      </div>
+    </div>
+  </div> 
+
+  
+
+    <div id="table" class="fixTableHead">
+      <table id="tab-ordini">
+        <thead>
+          <th><b>ID INTERNO</b></th>
+          <th><b>ID POLVERE</b></th>
+          <th><b>DESCRIZIONE</b></th>
+          <th><b>COD. FORNITORE</b></th>
+          <th><b>GIACENZA</b></th>
+          <th><b><font color="green" size="+2">MODIFICA</font></b></th>
+        </thead>
+        <tbody>
+  
+        </tbody>
+  
+      </table>
+    </div>
+
+  <script src="JS/tabellaPolvere.js"></script> 
+  </body>
+</html>

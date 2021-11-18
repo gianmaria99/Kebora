@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="views/figures/icon.png">
+    <title>Menu</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo center">Hey, benvenuto <%-name%> !</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="/ordiniTab">MAGAZZINO</a></li>
+            <li><a href="/polvereTab">POLVERE</a></li>
+            <li><a href="">CLIENTI</a></li>
+          </ul>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/exit">Exit</a></li>
+          </ul>
+        </div>
+    </nav>
+
+     
+    <div class="container center">
+        <div class="row">         
+            <div class="col s3 m4">
+                <div class="card">
+                    <a href="/ordiniTab">
+                        <h4><b>MAGAZZINO</b></h4>
+                        <div class="card-image">
+                            <img height="300 px" src="views/figures/magazzino.jpg" />
+                            <span class="card-title">MAGAZZINO</span>
+                        </div>
+                        <div class="card-content">
+                            <p>TABELLA ORDINI</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col s3 m4 ">
+                <div class="card">
+                    <a href="/polvereTab">
+                        <h4><b>POLVERE</b></h4>
+                        <div class="card-image">
+                            <img height="300 px" src="views/figures/polvere.jpeg" />
+                            <span class="card-title">POLVERE</span>
+                        </div>
+                        <div class="card-content">
+                            <p>TABELLA POLVERE</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="col s3 m4">
+                <div class="card">
+                    <a href="">
+                        <h4><b>CLIENTI (to define)</b></h4>
+                        <div class="card-image">
+                            <img height="300 px" src="views/figures/clienti.jpg" />
+                            <span class="card-title">CLIENTI</span>
+                        </div>
+                        <div class="card-content">
+                            <p>CLIENTI</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><!--END ROW-->
+        
+        <div class="row">
+            <div class="col s3 m4">
+                <div class="card">
+                    <a href="">
+                        <h4><b>?????</b></h4>
+                        <div class="card-image">
+                            <img height="100 px" src="views/figures/no.jpg" />
+                            <span class="card-title">???</span>
+                        </div>
+                        <div class="card-content">
+                            <p>????? (WORK IN PROGRESS)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div><!--END ROW--> 
+    </div><!--END CONTAINER-->
+    
+    <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Info</h5>
+              <h6>Developed and Designed by Simone Longato</h6>
+              <p class="grey-text text-lighten-4">This is an external page to handle and help the production process for VivGroup
+                  and has no commercial purposes. <br>
+                  The whole application has been developed in NodeJS and makes use of a local 
+                  server. <br>
+                  The authentication process follows the Jwt standard and tokens 
+                  have 1 hour expiration time<br>
+              </p>
+            </div>
+            <div class="col l4 offset-l1 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a href="https://vivgroupsrl.it/">Commercial Site</a></li>
+              </ul>
+            </div>
+            <div class="col l4 offset-l1 s12">
+                <h5 class="white-text">Emails & Contacts</h5>
+                <ul>
+                  <li><p>Dev: iotvivgroup@gmail.com || longato729@gmail.com</p></li>
+                  <li><p>VivGroup: info@vivgroupsrl.com</p></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 Copyright Text
+          <a class="grey-text text-lighten-4 right">Simone Leonardo Longato - Servizi Ingegneristici - longato729@gmail.com</a>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>

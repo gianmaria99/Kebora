@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="views/figures/icon.png">
+    <link href="style/stylesheet.css" rel="stylesheet"/>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>     
+
+
+    <title>Tabella Ordini Magazzino</title>
+    
+  </head>
+  <body>
+    
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/menu" class="brand-logo center">Tabella Ordini</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="">MAGAZZINO</a></li>
+          <li><a href="/polvereTab">POLVERE</a></li>
+          <li><a href="">CLIENTI</a></li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/exit">Exit</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+  <div class="container">
+      <div id="serch-section">
+        <div class="row">
+          <div class="input-field col s4 offset-l4">
+            <label for="serch"><font color="red" size="+2"><b>Search Item:</b></font></label>    
+            <input placeholder="" id="serch" class="validate" type="text" oninput="serch()">
+          </div>
+          <button style="margin-top: 20px;" id="del-serch" class="btn">DEL</button>
+        </div>
+      </div>
+      
+      <div id="start-new-order-btn">
+        <div class="row center">
+          <button class="btn"><b>NEW ORDER</b></button>
+        </div>
+      </div>
+
+      <div hidden id="edit">
+        <div class="row">
+          <div class="input-field col s3">       
+            <label for="id"><font color="red"><b>ID:</b></font></label>
+            <input placeholder="" class="validate" type="text" id="id" disabled>
+          </div>
+          <div class="input-field col s6 autocomplete"> 
+            <label for="cliente"><b><font color="red">CLIENTE:</font></b></label>            
+            <input placeholder="" class="validate" type="text" id="cliente">            
+          </div>
+          <div class="input-field col s3">       
+            <label for="referenza"><b><font color="red">REFERENZA:</font></b></label>
+            <input placeholder="" class="validate" type="text" id="referenza">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3">       
+            <label for="data_referenza"><b><font color="red" >DATA REFERENZA:</font></b></label>
+            <input placeholder="" class="validate" type="text" id="data_referenza">  
+          </div>
+          <div class="input-field col s6 autocomplete">  
+            <label for="polvere"><b><font color="red" >POLVERE:</font></b></label>     
+            <input placeholder="" class="validate" type="text" id="polvere">
+          </div>
+          <div class="input-field col s2">       
+            <label for="colore"><b><font color="red" >COLORE:</font></b></label>
+            <input placeholder="" class="validate" type="text" id="colore">  
+          </div>      
+          <div class="input-field col s1">       
+            <label for="barre_presunte"><b><font color="red">BARRE PRESUNTE:</font></b></label>
+            <input placeholder="" class="validate" type="number" id="barre_presunte">
+          </div>
+        </div>
+        
+        <div class="row center" hidden id="edit-btn">
+          <button class="btn">EDIT</button>   
+        </div>
+        <div class="row center" id="btn-decline">
+          <button class="btn" >DECLINE</button>
+        </div>    
+        <div class="row center" id="add-name-btn">
+          <button class="btn" >APPLY NEW ORDER</button>
+        </div>     
+      </div>       
+    </div>
+    
+    <div id="table" class="fixTableHead">
+      <table id="tab-ordini">
+        <thead>
+          <th><b>ID ORDINE</b></th>
+          <th><b>CLIENTE</b></th>
+          <th><b>REFERENZA</b></th>
+          <th><b>DATA REFERNZA</b></th>
+          <th><b>COLORE</b></th>
+          <th><b>POLVERE</b></th>
+          <th><b>BARRE PRESUNTE</b></th>
+          <th><b>DATA INSERIMENTO</b></th>
+          <th><b><font color="red" size="+2">ELIMINA</font></b></th>
+          <th><b><font color="green" size="+2">MODIFICA</font></b></th>
+        </thead>
+        <tbody>
+  
+        </tbody>
+  
+      </table>
+    </div> 
+
+  <script src="JS/tabellaOrdini.js"></script> 
+  </body>
+</html>
